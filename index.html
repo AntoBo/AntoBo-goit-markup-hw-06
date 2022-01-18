@@ -421,7 +421,7 @@
           <form class="subscribe-form" name="subscribe-form">
             <label>
               <input
-                class="footer-subscribe-input input"
+                class="footer-subscribe-input animated"
                 type="email"
                 name="email"
                 placeholder=" "
@@ -448,40 +448,50 @@
         <form class="modal-form">
           <label class="modal-form-label">
             <span class="modal-form-name">Имя</span>
-            <input class="modal-input" name="name" type="text" />
-            <svg class="modal-input-svg">
+            <input class="modal-input animated" name="name" type="text" placeholder=" " />
+            <svg class="modal-input-svg animated">
               <use href="images/icons.svg#icon-person"></use>
             </svg>
           </label>
           <label class="modal-form-label">
             <span class="modal-form-name">Телефон</span>
-            <input class="modal-input" name="tel" type="tel" /><svg class="modal-input-svg">
+            <input class="modal-input animated" name="tel" type="tel" placeholder=" "/><svg class="modal-input-svg animated">
               <use href="images/icons.svg#icon-phone"></use>
             </svg>
           </label>
           <label class="modal-form-label">
             <span class="modal-form-name">Почта</span>
-            <input class="modal-input" type="email" name="email" /><svg class="modal-input-svg">
+            <input class="modal-input animated" type="email" name="email" placeholder=" "/><svg class="modal-input-svg animated">
               <use href="images/icons.svg#icon-email"></use>
             </svg>
-          </label class="modal-form-label">
-          <label>
+          </label>
+          <label class="modal-form-label">
             <span class="modal-form-name">Комментарий</span>
-            <textarea class="modal-input modal-comment" name="comments" type="textarea" placeholder="Введите текст"></textarea>
+            <textarea
+              class="modal-input modal-comment animated"
+              name="comments"
+              type="textarea"
+              placeholder="Введите текст"
+            ></textarea>
           </label>
 
-          <div class="modal-privacy-wrap">
-            <input class="input" type="checkbox" id="privacy" name="privacy" />
-            <label class="privacy-text" for="privacy"
-              >Соглашаюсь с рассылкой и принимаю
+          <label class="modal-privacy">
+            <input
+              class="input input-checkbox visually-hidden"
+              type="checkbox"
+              id="privacy"
+              name="privacy"
+            />
+            <span class="modal-checkbox"></span
+            >Соглашаюсь с рассылкой и принимаю
               <a class="link privacy-link" href="">Условия договора</a></label
             >
-          </div>
+          </label>
 
-          <button class="button modal-submit-button" type="submit">Отправить</button>
+          <button class="button modal-submit-button animated" type="submit">Отправить</button>
         </form>
-        <button class="close-button" data-modal-close>
-          <svg class="close-button-svg">
+        <button class="close-button animated" data-modal-close>
+          <svg class="close-button-svg animated">
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
         </button>

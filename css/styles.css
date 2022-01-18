@@ -4,6 +4,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-accent: #2196f3;
+  --color-accent-darker: #188ce8;
 
   --text-color-title: #212121;
   --text-color-main: #757575;
@@ -20,6 +21,7 @@
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --cards-img-wrap-bg: rgba(33, 150, 243, 0.9);
   --modal-input-border: rgba(33, 33, 33, 0.2);
+  --close-btn-border: rgba(0, 0, 0, 0.1);
 }
 
 /* Utilites */
@@ -78,8 +80,13 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.input {
+  outline: none;
+}
+
 .input:hover,
-.input:focus {
+.input:focus,
+.input:not(:placeholder-shown) {
   border: 1px solid var(--color-accent);
 }
 
@@ -731,6 +738,20 @@ body {
 
   border: 1px solid var(--modal-input-border);
   border-radius: 4px;
+  outline: none;
+}
+
+.modal-input:hover,
+.modal-input:focus,
+.modal-input:not(:placeholder-shown) {
+  cursor: pointer;
+  border-color: var(--color-accent);
+}
+
+.modal-input:hover + .modal-input-svg,
+.modal-input:focus + .modal-input-svg,
+.modal-input:not(:placeholder-shown) + .modal-input-svg {
+  fill: var(--color-accent);
 }
 
 .modal-input.modal-comment {
@@ -747,8 +768,30 @@ body {
   fill: var(--text-color-title);
 }
 
-.modal-privacy-wrap {
+.modal-privacy {
   margin: 20px auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  margin-right: 8px;
+
+  border: 2px solid var(--text-color-title);
+  border-radius: 3px;
+  background-image: url('../images/check.svg');
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.input-checkbox:checked + .modal-checkbox {
+  background-color: var(--color-accent);
+  border-color: transparent;
 }
 
 .modal-comment {
@@ -763,6 +806,12 @@ body {
 
   margin-left: auto;
   margin-right: auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+  background-color: var(--color-accent-darker);
 }
 
 .backdrop.is-hidden .modal {
@@ -771,20 +820,26 @@ body {
 
 .close-button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 8px;
   right: 8px;
 
-  border: none;
+  border: 1px solid var(--close-btn-border);
   border-radius: 50%;
   width: 30px;
   height: 30px;
 
   cursor: pointer;
+  background-color: transparent;
 }
 .close-button-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 11px;
+  height: 11px;
+}
+
+.close-button:hover .close-button-svg,
+.close-button:focus .close-button-svg {
+  fill: var(--color-accent);
 }
