@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -384,7 +384,7 @@
           </address>
         </div>
         <div class="footer-social-wrap">
-          <p class="footer-join">присоединяйтесь</p>
+          <p class="footer-cta">присоединяйтесь</p>
           <ul class="list socials-list-footer">
             <li class="item socials-item-footer">
               <a class="link socials-link-footer animated" href="">
@@ -416,15 +416,54 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe-wrap">
+          <form name="subscribe-form" action="">
+            <label>
+              <p class="footer-cta">Подпишитесь на рассылку</p>
+              <input class="footer-subscribe-input" type="email" name="email" placeholder="E-mail"
+            /></label>
+
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
 
     <!-- Modal -->
     <div class="backdrop animated is-hidden" data-modal>
       <div class="modal animated">
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="modal-form">
+          <label>
+            <p class="modal-form-label">Имя</p>
+            <input name="name" type="text" />
+          </label>
+          <label>
+            <p class="modal-form-label">Телефон</p>
+            <input name="tel" type="tel" />
+          </label>
+          <label>
+            <p class="modal-form-label">Почта</p>
+            <input type="email" name="email" />
+          </label>
+          <label>
+            <p class="modal-form-label">Комментарий</p>
+            <textarea name="comments" type="textarea"></textarea>
+          </label>
+
+          <div class="modal-privacy-wrap">
+            <input type="checkbox" id="privacy" name="privacy" />
+            <label class="privacy-text" for="privacy"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="link privacy-link" href="">Условия договора</a></label
+            >
+          </div>
+
+          <button class="modal-submit-button" type="submit">Отправить</button>
+        </form>
         <button class="close-button" data-modal-close>
           <svg class="close-button-svg">
-            <use href="./images/icons.svg#icon-close-btn" ></use>
+            <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
         </button>
       </div>
