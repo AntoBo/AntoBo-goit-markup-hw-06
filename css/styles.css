@@ -124,7 +124,7 @@ body {
 }
 
 /* Header */
-.header.container {
+.header-main {
   border-bottom: 1px solid var(--header-border-color);
 }
 
@@ -773,6 +773,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.privacy-link {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 .modal-checkbox {
