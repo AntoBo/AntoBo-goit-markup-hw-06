@@ -421,7 +421,7 @@
           <form class="subscribe-form" name="subscribe-form">
             <label>
               <input
-                class="footer-subscribe-input animated"
+                class="footer-subscribe-input input animated"
                 type="email"
                 name="email"
                 placeholder=" "
@@ -442,7 +442,7 @@
 
     <!-- Modal -->
     <!-- add is-hidden! -->
-    <div class="backdrop animated" data-modal>
+    <div class="backdrop is-hidden animated" data-modal>
       <div class="modal animated">
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="modal-form">
@@ -455,13 +455,17 @@
           </label>
           <label class="modal-form-label">
             <span class="modal-form-name">Телефон</span>
-            <input class="modal-input animated" name="tel" type="tel" placeholder=" "/><svg class="modal-input-svg animated">
+            <input class="modal-input animated" name="tel" type="tel" placeholder=" " /><svg
+              class="modal-input-svg animated"
+            >
               <use href="images/icons.svg#icon-phone"></use>
             </svg>
           </label>
           <label class="modal-form-label">
             <span class="modal-form-name">Почта</span>
-            <input class="modal-input animated" type="email" name="email" placeholder=" "/><svg class="modal-input-svg animated">
+            <input class="modal-input animated" type="email" name="email" placeholder=" " /><svg
+              class="modal-input-svg animated"
+            >
               <use href="images/icons.svg#icon-email"></use>
             </svg>
           </label>
@@ -470,7 +474,6 @@
             <textarea
               class="modal-input modal-comment animated"
               name="comments"
-              type="textarea"
               placeholder="Введите текст"
             ></textarea>
           </label>
@@ -482,11 +485,9 @@
               id="privacy"
               name="privacy"
             />
-            <span class="modal-checkbox"></span
-            >Соглашаюсь с рассылкой и принимаю
-              <a class="link privacy-link" href="">Условия договора</a></label
-            >
-          </label>
+            <span class="modal-checkbox"></span>Соглашаюсь с рассылкой и принимаю
+            <a class="link privacy-link" href=""> Условия договора</a></label
+          >
 
           <button class="button modal-submit-button animated" type="submit">Отправить</button>
         </form>
